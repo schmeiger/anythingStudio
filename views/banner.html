@@ -1,0 +1,34 @@
+<h2>Banner</h2>
+
+<form method="" action="" ng-model="formModel">
+	<p>
+		<label for="subject">Subject</label><br/>
+		<input type="text" name="subject" id="subject" value="{{formModel.subject}}" ng-model="formModel.subject" ng-cloak>
+		<p ng-cloak>{{formModel.subject}}</p>
+	</p>
+	<p>
+		<label for="msg-body">Message</label><br/>
+		<textarea name="msg-body" id="msg-body" ng-model="formModel.msg" ng-cloak>{{formModel.msg}}</textarea>
+		<p ng-cloak>{{formModel.msg}}</p>
+	</p>
+	<p>
+		<a href="mailto:{{ encodeString('address@domain.com?subject=' + formModel.subject + '&amp;body=' + formModel.msg) }}" ng-cloak>Send</a>
+		<p ng-cloak>mailto:{{ encodeString('address@domain.com?subject=' + formModel.subject + '&amp;body=' + formModel.msg) }}</p>
+	</p>
+</form>
+
+<section class="portfolio">
+	<h2>Portfolio</h2>
+	
+	<p>
+		<label for="image-filter">Find Images:</label><br/>
+		<input type="text" id="image-filter" name="image-filter" ng-model="imageFilter" />
+	</p>
+
+	<div class="row">
+		<div  ng-repeat="img in images | filter:imageFilter" ng-class-odd="'classOdd'" ng-class-even="'classEven'" class="col-xs-3">
+			<h3 class="text-align-center" ng-cloak>{{img.title}}</h3>
+			<img ng-cloak ng-src="/img/{{img.src}}" alt="{{img.title}}" title="{{img.title}}" />
+		</div>
+	</div>
+</section>

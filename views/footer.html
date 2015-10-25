@@ -1,0 +1,40 @@
+<footer>
+
+  <h2>Dynamic Tabs</h2>
+
+  
+  <ul class="tabs" ng-model="tabs">
+  	<li ng-repeat="tab in tabs">
+			<div ng-switch = "tab"> <!-- ng-switch on="tab" -->
+			    <div ng-switch-default>
+			      <h3>HOME</h3>
+			      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			    </div>
+			    <div ng-switch-when="one">
+			      <h3 ng-click="menu1clicked()">Menu 1</h3>
+			      <p ng-class="{menu1:show}">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			    </div>
+			    <div ng-switch-when="two">
+			      <h3>Menu 2</h3>
+			      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			    </div>
+			    <div ng-switch-when="three">
+			      <h3>Menu 3</h3>
+			      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+			    </div>
+			  </div>
+			</div>
+
+  		<a href="#">{{tab}}</a>
+  	</li>
+  </ul>
+
+  <!-- <ul class="tabs">
+  	<li ng-click="tabs='one'"><a href="#">one</a></li>
+  	<li ng-click="tabs='two'"><a href="#">two</a></li>
+  	<li ng-click="tabs='three'"><a href="#">tree</a></li>
+  </ul> -->
+
+	
+
+</footer>
