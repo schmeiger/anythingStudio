@@ -24,7 +24,7 @@ anythingStudio.controller('anythingStudioController', function($scope){
 		{src : 'studio_9.jpg', title : 'stars'}
 	];
 
-	$scope.tabs = ["one", "two", "three"];
+	$scope.tabs = ["one", "two", "three", "four"];
 
 	$scope.menu1clicked = function(){
 		$scope.menu1 = !$scope.menu1;

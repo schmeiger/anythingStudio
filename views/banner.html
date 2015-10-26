@@ -28,7 +28,7 @@
 	<div class="row">
 		<div  ng-repeat="img in images | filter:imageFilter" ng-class-odd="'classOdd'" ng-class-even="'classEven'" class="col-xs-3">
 			<h3 class="text-align-center" ng-cloak>{{img.title}}</h3>
-			<img ng-cloak ng-src="/img/{{img.src}}" alt="{{img.title}}" title="{{img.title}}" />
+			<img ng-cloak ng-src="img/{{img.src}}" alt="{{img.title}}" title="{{img.title}}" />
 		</div>
 	</div>
 </section>
